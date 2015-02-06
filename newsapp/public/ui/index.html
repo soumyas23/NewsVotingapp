@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="ui">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  <link href="app.less" type="text/css" rel="stylesheet/less">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/journal/bootstrap.min.css">
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js"></script>
+ <script src="https://cdn.firebase.com/js/client/1.1.1/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+</head>
+<body>
+
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+ 
+  <!-- JS from Bower Components -->
+  <script src="bower_components/less.js/dist/less-1.6.2.js" data-concat="false"></script>
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+  <script src="bower_components/firebase/firebase-debug.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.js"></script>
+  <!-- Add New Bower Component JS Above -->
+
+
+  <!-- Main App JS -->
+  <script src="app.js"></script>
+  <script src="home/home.js"></script>
+  <!-- Add New Component JS Above -->
+
+  <div>
+    <div id="content" class="container">
+      <div class="row">
+        <div ng-view>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<div class="col-md-12" ng-controller="HomeCtrl">
+<div class="container">
+<div class="jumbotron">
+  <h2>NewsUpdater..</h2>
+ </div>
+  </div>
+  
+  <div ng-show="showadd">
+  <input type="submit" ng-click="add()" value="AddItem" 
+  class="btn-large btn-block btn-primary">	
+  </div>
+  <div class="show" ng-show="item">
+
+  	<form role="form" name="form">
+  <div class="form-group">
+   
+    <input type="text" 
+    class="form-control" 
+    ng-model="news.item" placeholder="Add news">
+   
+    <input type="text" class="form-control"
+     ng-model="news.description"  placeholder="Add description">
+    <input type="submit" ng-click="save(news)"
+     value="Add" class="btn btn-primary btn-xs">
+
+  <input type="submit" ng-click="cancel()" value="cancel" 
+  class="btn btn-primary btn-xs">	
+
+  
+
+</div>
+</div>
+<div class="container" >
+<div class="jumbotron">
+<table class="table table-striped table-bordered table-hover " >
+<tr ng-repeat="newses in newsadded" >
+<td>
+    {{newses.item}}
+ </td>
+
+ <td>
+
+   {{newses.description}}
+ </td>
+
+ <td>
+
+         <button type="submit" class="btn btn-default btn-sm"  ng-click="like(newses)">
+          <span class="glyphicon glyphicon-thumbs-up"></span> Like
+        </button>
+        
+ </td>
+ <td>
+
+         <button type="submit" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-thumbs-down" ng-click="dislike(newses)"></span> DisLike
+        </button>
+        
+ </td>
+ <td>
+ {{newses.vote}}
+ </td>
+ </tr>
+
+    </table>
+    </div>
+  </div>
+   
+</div>

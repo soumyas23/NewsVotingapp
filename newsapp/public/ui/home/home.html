@@ -33,7 +33,36 @@
 <div class="container" >
 <div class="jumbotron">
 <table class="table table-striped table-bordered table-hover " >
-<tr ng-repeat="newses in newsadded" >
+<tr>
+<th>
+	Title
+
+
+</th>
+<th>
+	Description
+
+
+</th>
+<th>
+	Like
+
+
+</th>
+
+<th>
+	Dislike
+
+
+</th>
+<th>
+	Rating
+
+
+</th>
+</tr>
+
+<tr ng-repeat="newses in newsadded " >
 <td>
     {{newses.item}}
  </td>
@@ -45,20 +74,20 @@
 
  <td>
 
-         <button type="submit" class="btn btn-default btn-sm"  ng-click="like(newses)">
-          <span class="glyphicon glyphicon-thumbs-up"></span> Like
+         <button type="submit" class="btn btn-default btn-sm"   ng-click="like(newses,newsadded)">
+          <span class="glyphicon glyphicon-thumbs-up"></span> 
         </button>
         
  </td>
  <td>
 
-         <button type="submit" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-thumbs-down" ng-click="dislike(newses)"></span> DisLike
+         <button type="submit" class="btn btn-default btn-sm" ng-click="dislike(newses,newsadded)">
+          <span class="glyphicon glyphicon-thumbs-down" ></span> 
         </button>
         
  </td>
- <td>
- {{newses.vote}}
+ <td><span  ng-class="{'true':'text-info','false':'text-danger'}[newses.vote > 0]">
+ {{newses.vote}}</span>
  </td>
  </tr>
 
